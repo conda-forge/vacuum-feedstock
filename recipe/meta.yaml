@@ -1,5 +1,5 @@
 {% set name = "vacuum" %}
-{% set version = "0.15.3" %}
+{% set version = "0.16.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/daveshanley/vacuum/archive/v{{ version }}.tar.gz
-  sha256: 47eee31ca0e50d3dc6b6183000062605dd749ee8ccad522c811f9c39e5d24b68
+  sha256: 14ed01d2171cfe10286df3398dfce865f2b3cc9e24ea2630bde69af97ff6d002
 
 build:
   number: 0
