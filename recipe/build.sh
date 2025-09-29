@@ -3,4 +3,4 @@
 set -o xtrace -o nounset -o pipefail -o errexit
 
 go build -buildmode=pie -trimpath -o=${PREFIX}/bin/${PKG_NAME} -ldflags="-s -w"
-go-licenses save . --save_path=license-files --ignore=github.com/pb33f/doctor
+go-licenses save . --save_path=license-files --ignore=github.com/pb33f/doctor --ignore=github.com/dop251/goja
