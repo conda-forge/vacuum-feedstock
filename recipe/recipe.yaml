@@ -1,12 +1,12 @@
-{% set name = "vacuum" %}
-{% set version = "0.18.3" %}
+context:
+  version: 0.18.3
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: vacuum
+  version: ${{ version }}
 
 source:
-  url: https://github.com/daveshanley/vacuum/archive/v{{ version }}.tar.gz
+  url: https://github.com/daveshanley/vacuum/archive/v${{ version }}.tar.gz
   sha256: 8e6a4bc66c9481f11eaa6e6de79bd08f219197b599e6f290f2e52e8b1f4eadc6
 
 build:
@@ -14,21 +14,21 @@ build:
 
 requirements:
   build:
-    - {{ compiler('go-nocgo') }}
+    - ${{ compiler('go-nocgo') }}
     - go-licenses
 
-test:
-  commands:
-    - vacuum --help
+tests:
+  - script:
+      - vacuum --help
 
 about:
-  home: https://github.com/daveshanley/vacuum
   license: MIT and BUSL-1.1
   license_file:
     - LICENSE
     - license-files/
   summary: vacuum is the worlds fastest OpenAPI 3, OpenAPI 2 / Swagger linter and quality analysis tool.
-  dev_url: https://github.com/daveshanley/vacuum
+  homepage: https://github.com/daveshanley/vacuum
+  repository: https://github.com/daveshanley/vacuum
 
 extra:
   recipe-maintainers:
