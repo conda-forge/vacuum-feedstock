@@ -1,5 +1,5 @@
 context:
-  version: "0.19.5"
+  version: "0.20.0"
 
 package:
   name: vacuum
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/daveshanley/vacuum/archive/v${{ version }}.tar.gz
-  sha256: f6bd4c1ef9c4ac23691b14ba896543f5acca0785b409a72b5deab2293157e858
+  sha256: 01e24183975dc986de514073ce6aae52441f78436d7d5110c754ad215b2cd269
 
 build:
   number: 0
